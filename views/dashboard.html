@@ -1,0 +1,124 @@
+<html dir="rtl">
+	<head>
+		<meta charset="utf-8" />
+		<title>لوحه التحكم</title>
+		<link href="../css/style.css" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+		<nav>
+			<div class="container">
+				<ul>
+					<li><a href="/">الرئيسية</a></li>
+					<li><a href="/nabtker/dashboard">لوحه التحكم</a></li>
+					<div class="logo">
+						<a href="#"><img src="../img/logo.png" /></a>
+					</div>
+				</ul>
+			</div>
+		</nav>
+		<div class="cls"></div>
+		<div class="top"></div>
+		<div class="container">
+			<div class="admin">
+				<h1>قائمه المشرفين</h1>
+				<br />
+				<div class="admin-info"> </div>
+				<br /><br />
+			</div>
+			<div class="more-options">
+				<a class="add" href="/addNewAdmin"> إضافه مشرف +</a>
+				<a class="del" href="/login">خروج</a>
+			</div>
+		</div>
+		<div class="container">
+			<div class="admin">
+				<h1>قائمه الملفات</h1>
+				<br />
+				<div class="file-info"> </div>
+				<br /><br />
+			</div>
+
+			<div class="container form-uploading upload-file">
+				<form method="POST" class="" enctype="multipart/form-data" action="/uploadFiles">
+					<label for="fileSrc" class="fileUpload">
+						إضافه ملف +
+						<input type="file" name="fileSrc" id="fileSrc" class="fileSrc" required />
+					</label>
+					<label for="fileImg" class="fileUpload">
+						إضافه صورة +
+						<input type="file" name="fileImg" id="fileImg" class="fileImg" required />
+					</label>
+					<label>
+						<input type="text" name="fileName" id="fileName" class="fileName" placeholder="اسم الملف" required />
+					</label>
+					<label>
+						<input type="text" name="authorName" id="authorName" class="fileName" placeholder="اسم المؤلف" required />
+					</label>
+					<label>
+						<input type="text" name="countPages" id="countPages" class="fileName" placeholder="عدد الصفحات" required />
+					</label>
+					<label>
+						<input type="text" name="dateVersion" id="dateVersion" class="fileName" placeholder="اسم الملف" required />
+					</label>
+					<label for="">
+						<button class="submitFile" type="submit">رفع</button>
+					</label>
+				</form>
+			</div>
+		</div>
+		<div class="container edit-file">
+			<h2>تعديل بيانات الملف</h2>
+			<form method="post" id="form-edit-file" action="">
+				<!-- <label for="fileSrc" class="fileUpload">
+					إضافه ملف +
+					<input type="file" name="new_fileSrc" id="new_fileSrc" class="fileSrc" required />
+				</label>
+				<label for="fileImg" class="fileUpload">
+					إضافه صورة +
+					<input type="file" name="new_fileImg" id="new_fileImg" class="fileImg" required />
+				</label> -->
+				<label>
+					<input type="text" name="new_fileName" id="new_fileName" class="fileName" placeholder="اسم الملف" required />
+				</label>
+				<label>
+					<input type="text" name="new_authorName" id="new_authorName" class="fileName" placeholder="اسم المؤلف" required />
+				</label>
+				<label>
+					<input type="text" name="new_countPages" id="new_countPages" class="fileName" placeholder="عدد الصفحات" required />
+				</label>
+				<label>
+					<input type="text" name="new_dateVersion" id="new_dateVersion" class="fileName" placeholder="اسم الملف" required />
+				</label>
+				<label for="">
+					<button class="submitFile" type="submit">تعديل</button>
+					<button><a href="/nabtker/dashboard">خروج</a> </button>
+				</label>
+			</form>
+		</div>
+		
+		<div class="container">
+			<div class="edit-admin">
+				<h2>تعديل بيانات admin</h2>
+				<form action="" method="put" autocomplete="off">
+					<input type="text" name="name" id="name" placeholder="الاسم " required />
+					<input type="username" name="username" id="username" placeholder="اسم المستخدم" required />
+					<input type="email" name="email" id="email" placeholder="البريد الالكتروني" required />
+					<input type="password" name="password" id="password" placeholder="كلمه المرور الجديدة" required />
+					<button type="submit">تعديل</button>
+					<button><a href="/nabtker/dashboard">خروج</a> </button>
+					<br /><br />
+				</form>
+			</div>
+		</div>
+
+		<br /><br />
+		<footer class="footer">
+			<h3>
+				جميع الحقوق محفوظه لدى <span><a class="ar" href="">نبتكر</a></span>
+			</h3>
+		</footer>
+
+		<script src="../js/admin.js" type="module"></script>
+	</body>
+</html>

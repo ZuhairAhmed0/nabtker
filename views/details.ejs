@@ -1,0 +1,70 @@
+<html dir="rtl">
+	<head>
+		<meta charset="utf-8" />
+		<title>التفاصيل</title>
+		<link href="../css/style.css" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+		<nav>
+			<div class="container">
+				<ul>
+					<li><a href="index.html">الرئيسية</a></li>
+					<div class="logo">
+						<a href="#"><img src="../img/logo.png" /></a>
+					</div>
+				</ul>
+			</div>
+		</nav>
+		<div class="cls"></div>
+		<div class="top"></div>
+
+		<div class="container">
+			
+			<section class="detailsFile">
+				<div class="img">
+					<img src="../uploads/<%= data[0]?.fileImg %>" alt="not" />
+				</div>
+				<div class="details_info">
+					<p>
+						<strong>اسم الكتاب : </strong>
+						&nbsp;&nbsp;
+						<span> <%= data[0].fileName %> </span>
+					</p>
+					<br />
+					<p>
+						<strong>المؤلف : </strong>
+						&nbsp;&nbsp;
+						<span> <%= data[0]?.author %> </span>
+					</p>
+					<br />
+					<p>
+						<strong>عدد الصفحات :</strong>
+						&nbsp;&nbsp;
+						<span> <%= data[0]?.countPages %> </span>
+					</p>
+					<br />
+					<p>
+						<strong>تاريخ الاصدار : </strong>
+						&nbsp;&nbsp;
+						<span><%= data[0]?.dateVersion %></span>
+					</p>
+					<p>
+						<a href="../uploads/<%= data[0]?.fileSrc %>"> تحميل</a>
+						<a href="../uploads/<%= data[0]?.fileSrc %>"> عرض</a>
+						<a href="/nabtker/dashboard"> خروج</a>
+					</p>
+				</div>
+			</section>
+		</div>
+
+		<br /><br />
+		<footer>
+			<h3>
+				جميع الحقوق محفوظه لدى <span><a class="ar" href="">نبتكر</a></span>
+			</h3>
+		</footer>
+
+		<!-- <script src="js/details.js"></script> -->
+	</body>
+</html>

@@ -1,0 +1,124 @@
+<html dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <title>تسجيل الدخول</title>
+        <link href="css/style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                margin-top: 40px;
+                direction: rtl;
+                font-family: Arial, sans-serif;
+            }
+    
+            h1 {
+                width: 300px;
+                margin: 30px auto 0;
+                text-align: center;
+            }
+    
+            .container {
+                width: 70%;
+                margin: 20px auto;
+            }
+            .form.container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            label {
+                font-size: 1.2rem;
+                width: 80%;
+                margin: auto;
+                display: block;
+            }
+            input[type=text],
+            input[type=PassWord] {
+                width: 80%;
+                padding: 12px 20px;
+                margin: 8px auto;
+                border-radius: 10px;
+                display: block;
+                border: 3px solid rgb(0, 0, 0);
+                box-sizing: border-box;
+                font-size: 17px;
+            }
+    
+            button {
+                background-color: rgb(34, 48, 238) !important;
+                color: rgb(255, 255, 255);
+                margin: 10px auto;
+                border: none;
+                cursor: pointer;
+                width: 200px !important;
+                border-radius: 10px;
+                display: block;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 10px;
+            }
+    
+            button:hover {
+                opacity: 1.7;
+            }
+    
+            .members {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 90%;
+            }
+    
+            .psw {
+                float: initial;
+                padding-top: 12px 20px;
+                font-size: 20px;
+            }
+            .psw a {
+                color: #087D7D;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <div class="logo">
+                        <a href="#"><img src="img/logo.png"></a>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <div class="cls"></div>
+        <div class="top"></div>
+        <div class="form container dashboard">
+            <p class="worng"></p>
+            <h1>تسجيل الدخول</h1>
+            <form action="" id="userInfo" autocomplete="off">
+                <label for="uname"><b>اسم المستخدم</b>
+                </label>
+                <input type="text" placeholder="أدخل اسم المستخدم" id="username" name="username" required>
+                <label for="psw"><b>كلمة المرور</b> </label>
+                <input type="password" placeholder="أدخل كلمة المرور" id="password" name="password" required>
+                <div class="members">
+                    <p class="psw">هل نسيت
+                        <a href="YOUR ULR PAGE HERE">كلمة المرور</a>
+                    </p>
+                    <p class="psw">
+                        <input type="checkbox" name="remember">تزكرني
+                    </p>
+                </div>
+                <button  type="submit"> تسجيل الدخول </button>
+            </form> 
+        </div>
+        
+        <br><br>
+        <footer>
+            <h3> جميع الحقوق محفوظه لدى <span><a class="ar" href="">نبتكر</a></span> </h3>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
