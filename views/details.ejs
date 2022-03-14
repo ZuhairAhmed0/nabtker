@@ -2,16 +2,16 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>التفاصيل</title>
-		<link href="../css/style.css" rel="stylesheet" />
+		<link href="/css/style.css" rel="stylesheet" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	<body>
 		<nav>
 			<div class="container">
 				<ul>
-					<li><a href="index.html">الرئيسية</a></li>
+					<li><a href="/">الرئيسية</a></li>
 					<div class="logo">
-						<a href="#"><img src="../img/logo.png" /></a>
+						<a href="#"><img src="/img/logo.png" /></a>
 					</div>
 				</ul>
 			</div>
@@ -23,7 +23,7 @@
 			
 			<section class="detailsFile">
 				<div class="img">
-					<img src="../uploads/<%= data[0]?.fileImg %>" alt="not" />
+					<img src="/uploads/<%= data[0]?.fileImg %>" alt="not" />
 				</div>
 				<div class="details_info">
 					<p>
@@ -50,9 +50,9 @@
 						<span><%= data[0]?.dateVersion %></span>
 					</p>
 					<p>
-						<a href="../uploads/<%= data[0]?.fileSrc %>"> تحميل</a>
-						<a href="../uploads/<%= data[0]?.fileSrc %>"> عرض</a>
-						<a href="/nabtker/dashboard"> خروج</a>
+						<a href="/uploads/<%= data[0]?.fileSrc %>"> تحميل</a>
+						<a href="/uploads/<%= data[0]?.fileSrc %>"> عرض</a>
+						<a href="/"> خروج</a>
 					</p>
 				</div>
 			</section>

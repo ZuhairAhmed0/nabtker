@@ -6,7 +6,7 @@ form.addEventListener('submit', (event) => {
 	event.preventDefault();
 	const userData = {username: username.value, password: password.value};
 	let myFetch = async () => {
-		let response = await fetch('http://localhost:3000/login', {
+		let response = await fetch('/login', {
 			method: 'POST',
 			mode: 'cors',
 			headers: {
@@ -18,11 +18,11 @@ form.addEventListener('submit', (event) => {
 		return users;
 	};
 	myFetch()
-		.then((data) => {
-			const objData = JSON.parse(data);
-			if (objData.username === username.value && objData.password === password.value) {
-				location.href = '/nabtker/dashboard';
-			} 
+		.then((result) => {
+			const data = JSON.parse(result);
+			if (data.info.username === username.value && data.info.password === password.value) {
+				location.href = data.redirect;
+			}
 		})
 		.catch((err) => {
 			username.style = 'border: 1px solid red';
@@ -30,8 +30,5 @@ form.addEventListener('submit', (event) => {
 			username.value = '';
 			password.value = '';
 			document.querySelector('.worng').textContent = 'invalid username or password';
-		}); 
+		});
 });
-
-
-

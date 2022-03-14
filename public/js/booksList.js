@@ -9,7 +9,7 @@ const show_more_book = document.querySelector('.show-more-book');
 
 // لعرض الملفات في الصفحة
 
-fetch('/uploadFiles', {
+fetch('/file/upload', {
 	method: 'get',
 	mode: "no-cors"
 })
@@ -25,7 +25,7 @@ fetch('/uploadFiles', {
 			const html = `
 					<div class="book">
 						<img src="../uploads/${info.fileImg}">
-						<a class="details" href="details/${info.id}">عرض التفاصيل</a>
+						<a class="details" href="/file/details/${info.id}">عرض التفاصيل</a>
 						<h3>${info.fileName}</h3>
 						<h5><a href="../uploads/${info.fileSrc}">تحميل</a></h5>
 					</div>

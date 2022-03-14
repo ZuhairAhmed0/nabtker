@@ -13,7 +13,7 @@ const password = document.querySelector('.edit-admin #password');
 let id = 1;
 
 // لعرض جميع الادمن في الصفحة
-fetch('/allAdmin', {
+fetch('/admin/all', {
 	method: 'get',
 })
 	.then((response) => {
@@ -50,7 +50,7 @@ addmin_container.addEventListener('click', (event) => {
 	if (event.target.className === 'btn-del') {
 		const userData = event.target.dataset.doc;
 		let myFetch = async () => {
-			let response = await fetch(`/DeleteAdmin/${userData}`, {
+			let response = await fetch(`/admin/Delete/${userData}`, {
 				method: 'DELETE',
 			});
 			const users = await response.text();
@@ -86,7 +86,7 @@ editAdminInfo.addEventListener('submit', (event) => {
 		password: password.value,
 	};
 	let myFetch = async () => {
-		let response = await fetch(`/editAdminInfo/${id}`, {
+		let response = await fetch(`/admin/edit/${id}`, {
 			method: 'PUT',
 			// mode: 'cors',
 			headers: {
@@ -108,7 +108,7 @@ editAdminInfo.addEventListener('submit', (event) => {
 });
 
 // لعرض جميع الملفات في الصفحة
-fetch('/uploadFiles', {
+fetch('/file/upload', {
 	method: 'get',
 })
 	.then((response) => {
@@ -123,7 +123,7 @@ fetch('/uploadFiles', {
 			(info) => `<section>
 		<div class="head">
 		<a href="#"><img src="../uploads/${info.fileImg}" ></a>
-		<a class="details" href="/details/${info.id}">عرض التفاصيل</a>
+		<a class="details" href="/file/details/${info.id}">عرض التفاصيل</a>
 		</div>
 		<div class="edit">
 			<h2> <span>${info.fileName}</span></h2>
@@ -145,7 +145,7 @@ files_container.addEventListener('click', (event) => {
 	if (event.target.className === 'btn-del') {
 		const userData = event.target.dataset.doc;
 		let myFetch = async () => {
-			let response = await fetch(`/DeleteFiles/${userData}`, {
+			let response = await fetch(`/file/Delete/${userData}`, {
 				method: 'DELETE',
 			});
 			const files = await response.text();
@@ -163,7 +163,7 @@ files_container.addEventListener('click', (event) => {
 	if (event.target.className === 'btn-add') {
 		// للوصول الي ملف معين لتعديل البيانات
 		eidtFile.parentElement.style = 'opacity: 1; z-index: 99;';
-		eidtFile.action = `editFiles/${event.target.dataset.doc}`;
+		eidtFile.action = `/file/edit/${event.target.dataset.doc}`;
 	}
 });
 
